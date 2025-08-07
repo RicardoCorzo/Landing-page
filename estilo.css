@@ -1,0 +1,538 @@
+/* Página desarrollada y mejorada por:
+    ° Adriana María Salgado Madariaga
+    ° Angel Johana Hernandez
+    ° Diana Carolina Florez Rodríguez
+    ° Donovan Jahir Bohórquez Espinosa
+    ° Jhon Parra
+    ° Idelber Alexander Morales Rubio
+    ° Nicolás Triviño Lopez
+    ° Laura Camila Romero Salgado
+    ° Yesica Lorena Martinez Camacho
+    ° Ricardo Corzo */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    overflow-x: hidden; 
+}
+
+/* CABECERA */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 150px;
+    align-items: center;
+    background-color: #0A142D;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: none;
+}
+
+header .menu ul.elemento {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+header .menu ul.elemento li,
+header .iniciarSesion ul li {
+    display: inline-block;
+}
+
+header .menu ul.elemento li a,
+header .iniciarSesion ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease, background-color 0.3s ease;
+    white-space: nowrap; 
+    
+}
+
+header .menu ul.elemento li a:hover,
+header .iniciarSesion ul li a:hover {
+    color: #00FFFF;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    
+}
+
+header.abajo {
+    padding: 10px 150px; /* Reduce el padding vertical para encoger el header */
+    background-color: #4f586d; /* Opcional: un color ligeramente diferente */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Opcional: sombra para que se vea "flotando" */
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+    
+}
+
+.elemento{
+    list-style: none;
+}
+.elemento a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3 ease;
+    transition: 0.7s;
+}
+
+.elemento a:hover{
+    color: #00FFFF;
+}
+
+/* INICIAR SESIÓN */
+
+.iniciarSesion ul{
+    list-style: none;
+}
+.iniciarSesion a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3 ease;
+}
+
+.iniciarSesion a:hover{
+    color: #00FFFF;
+}
+
+/*SECCIÓN INFORMACIÓN*/
+
+.informacion{
+    background-color: #0A142D;
+    display: flex;   
+    width: 100%;
+    align-items: center;
+    padding-top: 58px;
+}
+
+.primeraParte{
+    width: 50%;
+    padding-left: 130px;
+}
+.cuadro{
+    display: inline-flex;
+    background-color: black;  
+    padding: 8px 16px;              /*le da el ancho y alto del recuadro negro*/
+    border-radius: 10px;
+    color: white; 
+    font-size: 13px;
+    gap: 20px;
+}
+
+.desgloce{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.desgloce > li > a{
+    color: white;
+    text-decoration: none;    
+}
+
+
+
+.desgloceGuitarras{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.desgloce li:hover .desgloceGuitarras{
+    display: block;
+}
+
+.desgloceGuitarras li:hover{
+    background-color: gray;
+}
+
+.desgloceGuitarras > li > a{
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    text-decoration: none;
+}
+
+/* .menu {
+    position: relative;
+    display: inline-block;
+} */
+
+/* .boton_menu {
+    background-color: black;
+    color: rgb(223, 218, 213);
+    padding: 1px 2px;
+    border: none;
+    cursor: pointer;
+} */
+
+/* .menu_contenido {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+} */
+
+/* .menu_contenido.mostrar {
+    display: block;
+    opacity: 1;
+    background-color: rgb(35, 43, 88);
+    color: rgb(223, 218, 213);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+ */
+
+.tituloGrande{
+    padding-top: 30px;
+    padding-bottom: 50px;
+    text-align:left;
+    color: white;
+    font-size: 42px;
+    font-family: 'Montserrat', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+       
+}
+
+.parrafo1{
+    text-align: left;    
+    font-size: 18px;
+    color: white;
+    opacity: 0.6;
+}
+.parrafo2{
+    text-align: left;    
+    font-size: 18px;
+}
+
+.parrafo2 span{
+    color: white;
+    opacity: 0.6; 
+}
+
+.parrafo2 strong{
+    color: white;
+}
+
+
+.formulario{
+    padding-top: 50px;
+    display: flex;
+    margin-bottom: 20px;
+    gap: 1px;
+    width: 100%;
+}
+
+.recuadro{
+    flex-grow: 1;           /*el formulario se estirara para ocupar todo el espacio disponible */
+    
+}
+
+#correo-input{
+    padding: 12px 15px;                      /* Ajusta el relleno interno para darle altura y algo de ancho lateral */
+    border: none;                            /* Elimina el borde por defecto del input */
+    border-radius: 5px;
+    width: 98%;                              /* ¡CLAVE! Hace que el input ocupe el 100% del ancho de su padre (<form.recuadro>) */
+    box-sizing: border-box;                  /* Asegura que el padding y el borde no agreguen ancho extra al 100% */
+    font-size: 16px;
+}
+
+.boton{
+    color: white;
+    background: #14b8a6;
+    padding: 12px 15px;                       /* Le da la altura y el ancho adecuados al botón, haciendo que se ajuste al texto */
+    border: none;
+    cursor: pointer;                          /* Cambia el cursor a una mano al pasar por encima */
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;   /* Transición suave para el efecto hover */
+    margin-right: 68px;
+}
+
+.boton:hover{
+    background-color: #0d9488;              /* Color más oscuro al pasar el mouse por encima del botón */
+}
+.segundaParte{
+    width: 50%;
+    overflow: hidden;
+}
+
+.imagenPpl img{
+    display: block;
+}
+
+.productos{
+    padding-top: 50px;
+    padding-bottom: 50px;  
+    text-align: center;
+}
+
+.titulo1{
+    text-transform: uppercase;    /*Pone la letra en mayusculas*/
+    letter-spacing: 0px;         /*Le da espacio entre letras*/
+    margin-bottom: 15px;          /*le da espacio abajo del bloque o de la letra "NUEVAS"*/
+    margin-top: 0;                /* Elimina el margen superior por defecto de h5 */
+    font-weight: bold;
+}
+
+.titulo2{
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+}
+
+.parrafo3{
+    color: gray;
+    opacity: 1;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0;
+}
+
+.guitarras{
+    display: flex;
+    flex-wrap: wrap;           /* Importante para que las tarjetas salten a la siguiente línea */
+    justify-content: center;   /* Centra las tarjetas horizontalmente en el contenedor */
+    align-items: stretch;      /* <--- ¡CLAVE! Asegura que los ítems (tarjetas) se estiren a la misma altura si su padre es flex */
+    margin-top: 0;
+    width: 100%;
+    /* background: yellowgreen; */
+    gap: 10px;
+    padding: 30px 120px;
+    height: auto;
+    
+}
+
+.imagen1{
+    display: flex;                /* ¡CLAVE para la altura uniforme de la tarjeta! */
+    flex-direction: column;       /* Apila el contenido de la tarjeta verticalmente */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(150, 146, 146, 0.1); /* Sombra sutil: desplazamiento horizontal 0, vertical 4px, desenfoque 8px, color negro con 10% de opacidad */
+    margin-bottom: 0;
+    background: #ffffff;
+    overflow: hidden;
+    width: 300px;
+    min-height: 522px;
+    padding-bottom: 15px;                        /*Asegura que las imágenes y contenido interno respeten el border-radius */
+}
+
+
+.guitarra1{
+    width: 100%;
+    height: 220%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; 
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.imagen2{
+    display: flex;                /* ¡CLAVE para la altura uniforme de la tarjeta! */
+    flex-direction: column;       /* Apila el contenido de la tarjeta verticalmente */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(150, 146, 146, 0.1); /* Sombra sutil: desplazamiento horizontal 0, vertical 4px, desenfoque 8px, color negro con 10% de opacidad */
+    margin-bottom: 0;
+    background: #ffffff;
+    overflow: hidden;    
+    width: 300px;
+    padding-bottom: 15px;                      /*Asegura que las imágenes y contenido interno respeten el border-radius */
+}
+
+.guitarra2{
+    width: 100%;
+    height: 220%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; 
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.imagen3{
+    display: flex;                /* ¡CLAVE para la altura uniforme de la tarjeta! */
+    flex-direction: column;       /* Apila el contenido de la tarjeta verticalmente */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(150, 146, 146, 0.1);   /*Sombra sutil: desplazamiento horizontal 0, vertical 4px, desenfoque 8px, color negro con 10% de opacidad */
+    margin-bottom: 0;
+    background: #ffffff;
+    overflow: hidden; 
+    width: 300px;
+    padding-bottom: 15px;                          /*Asegura que las imágenes y contenido interno respeten el border-radius */
+}
+
+.guitarra3{
+    width: 100%;
+    height: 220%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0; 
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.parrafo4{
+    text-align: left;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.titulo3{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.parrafo5{
+    color: gray;
+    opacity: 1;
+    margin-left: 20px;
+}
+.informacionBloguero{
+    display: flex;
+    align-items: center;
+}
+
+.nombreBloguero{
+    margin-left: 20px;
+    margin-top: 25px;
+}
+
+.nombreBloguero .parrafo6{
+    color: gray;
+    opacity: 1;
+}
+
+.bloguero{
+    display: inline-flex;
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 40px;
+    border-radius: 900px;
+}
+
+.contactanos{
+    display: flex;
+    background-color:#0A142D;
+    width: 100%;
+}
+
+.imagenGuitarrista{
+    flex:0 0 50%;
+    overflow: hidden;
+}
+
+.guitarrista{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.contactos{
+    flex: 0 0 50%;
+    padding: 40px 35px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 35px;
+    
+}
+
+.contactos button{
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    align-self: flex-start;                               /*convierte el boton mas pequeño y hacia la izquierdas*/
+    border-radius: 5px;
+    white-space: nowrap;
+    
+}
+
+.contactos h2{
+    font-size: 33px;
+    font-family: 'Montserrat', italic sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 5000; 
+          
+}
+
+.footer{
+    display: flex;
+    padding: 40px 0px 0px 120px;
+    
+}
+
+.contenidoFooter{
+    display: flex;
+    gap: 100px;
+}
+
+.menu{
+    list-style: none;
+}
+
+.mapaSitio{
+    display: flex;
+    gap: 90px;
+}
+
+.icono{
+    color: #9B59B6;
+    font-size: 20px;
+    transition: color 0.3 ease;
+}
+.icono:hover{
+    color: #00FFFF;
+    
+}
+
+.servicio1{
+    list-style: none;
+    
+}
+.servicio1 li{
+    gap: 100px;
+}
+
+.derechosAutor{
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 10px;
+}
+
+
